@@ -47,9 +47,9 @@ int GetSignal() {
   // for (int i = 0; i < ArraySize(SlowMaArray); i++) Print("SlowMaArray ", i, " = ", DoubleToString(SlowMaArray[i], digis));
   // for (int i = 0; i < ArraySize(FastMaArray); i++) Print("FastMaArray ", i, " = ", DoubleToString(FastMaArray[i], digis));
   if (FastMaArray[1] > SlowMaArray[1]) {
-    if (FastMaArray[2] <= SlowMaArray[2] && FastMaArray[3] <= SlowMaArray[3]) tradesignal = 0; // Buy
+    if (FastMaArray[2] <= SlowMaArray[2] && FastMaArray[3] <= SlowMaArray[3]) tradesignal = 0; // Cross Up
   } else if (FastMaArray[1] < SlowMaArray[1]) {
-    if (FastMaArray[2] >= SlowMaArray[2] && FastMaArray[3] >= SlowMaArray[3]) tradesignal = 1; // Sell
+    if (FastMaArray[2] >= SlowMaArray[2] && FastMaArray[3] >= SlowMaArray[3]) tradesignal = 1; // Cross Down
   }
   return(tradesignal);
 }
